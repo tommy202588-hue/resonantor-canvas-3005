@@ -1,0 +1,17 @@
+import type { ScriptDocument, ScriptShot, ScriptAsset } from '../types/storyboard';
+import type { AppSettings, ApiProvider, ModelConfig } from '../types/settings';
+export const SCRIPT_LIMITS: { source: number; shots: number; assets: number; image: number };
+export const ASSET_LABELS: Record<ScriptAsset['kind'], string>;
+export const SCRIPT_STEPS: string[];
+export function createScriptDocument(): ScriptDocument;
+export function createScriptShot(): ScriptShot;
+export function isScriptImage(value: unknown): boolean;
+export function validateScriptDocument(doc: unknown): ScriptDocument;
+export function parseScriptJson(raw: string): any;
+export function parseStoryboard(raw: string, sourceDoc: ScriptDocument): ScriptDocument;
+export function parseShotPrompts(raw: string, shots: ScriptShot[]): ScriptShot[];
+export function scriptProgress(doc: ScriptDocument): { shotsReady: boolean; images: number; prompts: number; completed: boolean[]; count: number };
+export function resolveScriptModel(settings: AppSettings, category: 'text' | 'image', selection?: string): { provider: ApiProvider; model: ModelConfig };
+export function buildStoryboardRequest(doc: ScriptDocument, count: number): { system: string; user: string };
+export function buildShotPromptRequest(doc: ScriptDocument, shots: ScriptShot[]): { system: string; user: string };
+export function buildAssetPrompt(doc: ScriptDocument, asset: ScriptAsset): string;

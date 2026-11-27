@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-17",
+  "comfyuiPort": 8190,
+  "pluginVersion": "2.5.1",
+  "gpu": "NVIDIA GeForce RTX 4080 16GB",
+  "torch": "2.7.0+cu128",
+  "promptId": "06428123-b313-4d75-bb38-c37b813d9e79",
+  "input": {
+    "width": 320,
+    "height": 478
+  },
+  "output": {
+    "width": 2048,
+    "height": 3058,
+    "bytes": 11236498,
+    "filename": "seedvr2-validation-2048_00001_.png",
+    "subfolder": "",
+    "type": "output"
+  },
+  "elapsedSeconds": 16.451,
+  "status": "success"
+}
